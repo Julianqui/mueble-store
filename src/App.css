@@ -28,7 +28,15 @@
   color: #61dafb;
 }
 
-.App-header__logo{
+.black{
+  background: #08191d;
+}
+
+.grey{
+  background: #2f3c40;
+}
+
+.logo{
   border: 5px solid #fff;
   padding: 60px;
   border-radius: 50%;
@@ -38,14 +46,12 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: #2f3c40;
 }
 
-.App-header__letter{
+.logo__letter{
   border: 5px solid #ddd;
   padding: 20px;
   border-radius: 50%;
-  background: #08191d;
   width: 50px;
   height: 50px;
   display: flex;
@@ -53,11 +59,10 @@
   justify-content: center;
 }
 
-.App-header__tittle{
+.logo__tittle{
   border: 5px solid #ddd;
   padding: 10px 40px 10px 40px;
   border-radius: 30px;
-  background: #08191d;
 }
 
 @keyframes App-logo-spin {

@@ -4,22 +4,23 @@ import './App.css';
 function App() {
   return (
     <div className="App">
+
       <header className="App-header">
 
-          <div className="App-header__logo">
+          <div className="logo grey">
 
-              <h2 className="App-header__letter">
+              <h2 className="logo__letter black">
                   M
               </h2>
 
-
-              <h3 className="App-header__tittle">
+              <h3 className="logo__tittle black">
                   Mueble Store
               </h3>
 
           </div>
 
       </header>
+
     </div>
   );
 }
