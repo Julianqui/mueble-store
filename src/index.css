@@ -11,9 +11,3 @@ code {
     monospace;
 }
 
-.App-header__tittle{
-  border: 1px solid #ddd;
-  padding: 10px 40px 10px 40px;
-  border-radius: 30px;
-  background: #61dafb;
-}
