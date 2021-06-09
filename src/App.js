@@ -1,9 +1,11 @@
-import logo from './logo.svg';
+import './components/navBar/navBar.js'
 import './App.css';
+import {NavBar} from "./components/navBar/navBar";
 
 function App() {
   return (
-    <div className="App">
+      <NavBar />
+   /* <div className="App">
 
       <header className="App-header">
 
@@ -21,7 +23,7 @@ function App() {
 
       </header>
 
-    </div>
+    </div>*/
   );
 }
 
