@@ -1,5 +1,7 @@
+import React from 'react'
+import {CartWidget} from "../cartWidget/cartWidget";
 import './style.css';
-export const NavBar = () => {
+export const NavBar = ({store, onClick, children}) => {
     return (
         <nav className="nav">
 
@@ -7,22 +9,33 @@ export const NavBar = () => {
                 <div className="logo__letter">
                     M
                 </div>
-                <p className="logo__name">Mueble Store</p>
+                <p className="logo__name">{store}</p>
             </div>
 
             <ul className='menu'>
                 <li>
-                    <a href="" className="menu__link">Productos</a>
+                    <p className="menu__link">Productos</p>
                 </li>
 
                 <li>
-                    <a href="" className="menu__link">Sobre Nosotros</a>
+                    <p className="menu__link">Sobre Nosotros</p>
                 </li>
 
                 <li>
-                    <a href="" className="menu__link">Contacto</a>
+                    <p className="menu__link">Contacto</p>
                 </li>
             </ul>
+
+            <div>
+                <button onClick={onClick}>
+                    Apretame
+                </button>
+
+            </div>
+
+            <div>{children}</div>
+
+            <CartWidget />
 
         </nav>
     )
