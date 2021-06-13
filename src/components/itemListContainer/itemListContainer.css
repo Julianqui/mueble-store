@@ -1,0 +1,16 @@
+.greeting-container{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.greeting{
+    background: #07303b;
+    color: #fff;
+    font-size: 50px;
+    border: 5px solid #fff;
+    padding: 20px 40px;
+    border-radius: 50px;
+    box-shadow: 10px 10px 50px #00000029;
+}

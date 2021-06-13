@@ -1,7 +1,7 @@
 import React from 'react'
 import {CartWidget} from "../cartWidget/cartWidget";
-import './style.css';
-export const NavBar = ({store, onClick, children}) => {
+import './navbar.css';
+export const NavBar = ({store, onClick}) => {
     return (
         <nav className="nav">
 
@@ -11,6 +11,8 @@ export const NavBar = ({store, onClick, children}) => {
                 </div>
                 <p className="logo__name">{store}</p>
             </div>
+
+            <div className="menu-contenedor">
 
             <ul className='menu'>
                 <li>
@@ -26,16 +28,9 @@ export const NavBar = ({store, onClick, children}) => {
                 </li>
             </ul>
 
-            <div>
-                <button onClick={onClick}>
-                    Apretame
-                </button>
+                <CartWidget />
 
             </div>
-
-            <div>{children}</div>
-
-            <CartWidget />
 
         </nav>
     )

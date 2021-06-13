@@ -14,6 +14,8 @@ li{
 }
 
 .nav{
+    position: fixed;
+    width: 100%;
     background: #07303b;
     color: #ddd;
     padding: 10px 40px 10px 40px;
@@ -53,15 +55,24 @@ li{
     border-bottom: transparent 3px solid;
 }
 
+.menu-contenedor{
+    display: flex;
+    justify-content: space-between;
+    width: 450px;
+}
+
 .menu__link{
-    color: #dba3a3;
+    color: #fff;
     border-bottom: transparent 3px solid;
+    cursor: pointer;
 }
 
 .menu__link:hover{
     color: #dba3a3;
     border-bottom: #dba3a3 3px solid;
 }
+
+
 
 
 

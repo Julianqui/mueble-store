@@ -1,20 +1,21 @@
 import './App.css';
+import 'font-awesome/css/font-awesome.min.css';
 import {NavBar} from "./components/navBar/navBar";
+import {ItemListContainer} from "./components/itemListContainer/itemListContainer";
 
 function App() {
 
   const name= 'Mueble Store';
 
-  const handClick =  () => alert('Me apretastesss');
+  const item= 'Soy el Item List Container con props';
 
   return (
+      <>
+      <NavBar store={name} />
 
-      <NavBar store={name} onClick={handClick}>
-        <span>
-          Hola como andas
-        </span>
-      </NavBar>
 
+      <ItemListContainer greeting={item} />
+      </>
   )
 }
 
