@@ -1,7 +1,7 @@
 import React from 'react'
 import {CartWidget} from "../cartWidget/cartWidget";
 import './navbar.css';
-export const NavBar = ({store, onClick}) => {
+export const NavBar = ({store}) => {
     return (
         <nav className="nav">
 
