@@ -3,7 +3,7 @@ import './cartWidget.css';
 export const CartWidget = () => {
     return (
 
-       <div className='cart-container'>
+       <div>
 
            <i className="fa fa-shopping-cart"></i>
 
