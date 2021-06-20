@@ -2,8 +2,10 @@ import React, {useState} from 'react'
 import {ItemCount} from "../itemCount/itemCount";
 import './itemListContainer.css';
 export const ItemListContainer = ({greeting}) => {
-    const [initial, setInitial] = useState(1);
-    const [stock, setStock] = useState(10);
+
+
+    const inicial= '';
+    const stock= '';
 
     return (
 
@@ -13,7 +15,7 @@ export const ItemListContainer = ({greeting}) => {
             <h1 className='greeting'>{greeting}</h1>
 
 
-            <ItemCount initial={initial} setInitial={setInitial} stock={10} setStock={setStock}/>
+            <ItemCount inicial={1} stock={10}/>
 
 
         </div>

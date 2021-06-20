@@ -1,37 +1,28 @@
 import React, { useState } from 'react';
 import './itemCount.css';
-export const ItemCount = ({stock, initial, setInitial, onAdd}) => {
+export const ItemCount = ({stock, inicial, onAdd}) => {
 
-    const sum = () => {
-        if (initial <= stock -1){
-            let sumClicks = initial + 1;
-            setInitial(sumClicks);
-        }
-    };
+    const [count, setCount] = useState(inicial);
 
-
-    const rest = () => {
-        if (initial >= 1){
-            let restClicks = initial - 1;
-            setInitial(restClicks);
-        }
-
-    };
+    const actualizaCantidad = (add) => {
+        if ((stock >= count+add) && (0 <= count + add + add)) setCount(count+add)
+    }
 
     return (
 
         <div className='margin'>
 
             <button className='agregar-button'>Agregar Al Carrito</button>
+
             <div className='count-contenedor'>
 
-                <button onClick={() => rest()}>-</button>
-                <p className='number'>{initial}</p>
+                <button onClick={() => actualizaCantidad(-1)}>-</button>
 
-                <button id='myBtn' onClick={() => sum()}>+</button>
+                <p className='number'>{count}</p>
+
+                <button onClick={() => actualizaCantidad(1)}>+</button>
 
             </div>
-
 
         </div>
     )

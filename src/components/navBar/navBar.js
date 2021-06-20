@@ -9,7 +9,7 @@ export const NavBar = ({store}) => {
                 <div className="logo__letter">
                     M
                 </div>
-                <p className="logo__name">{store}</p>
+                <p className="logo__name">Mueble Store</p>
             </div>
 
             <div className="menu-contenedor">
