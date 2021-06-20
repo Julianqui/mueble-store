@@ -5,13 +5,11 @@ import {ItemListContainer} from "./components/itemListContainer/itemListContaine
 
 function App() {
 
-  const name= 'Mueble Store';
-
   const item= 'Soy el Item List Container con props';
 
   return (
       <>
-      <NavBar store={name} />
+      <NavBar/>
 
 
       <ItemListContainer greeting={item} />
