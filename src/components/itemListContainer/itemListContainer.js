@@ -13,7 +13,7 @@ export const ItemListContainer = ({greeting}) => {
             <h1 className='greeting'>{greeting}</h1>
 
 
-            <ItemCount inicial={1} stock={10}/>
+            <ItemCount inicial={0} stock={10}/>
 
             {/*<Item/>*/}
 

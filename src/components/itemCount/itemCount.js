@@ -7,7 +7,7 @@ export const ItemCount = ({stock, inicial, onAdd}) => {
 
 
     const actualizaCantidad = (add) => {
-        if ((stock >= count+add) && (0 <= count + add + add))
+        if ((stock >= count+add) && (0 <= count + add ))
             setCount(count+add);
             setStocks(count+add)
 
@@ -18,7 +18,7 @@ export const ItemCount = ({stock, inicial, onAdd}) => {
             alert(`Agregaste al carrito ${stocks} items`)
 
         } else {
-            alert(`No se acepta!! No agregaste nada. No podes agregar ${stocks} items.`)
+            alert(`No se acepta!! No agregaste nada. No podes agregar 0 items.`)
         }
     }
 
