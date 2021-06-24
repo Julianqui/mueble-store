@@ -1,29 +1,31 @@
-
+import React from 'react'
 
 export const Item = () => {
 
 
-    const solicitarPlato = new Promise((resolve, reject) => {
-        console.log('Recibi tu pedido')
+    const productos = new Promise((resolve, reject) => {
+
+        console.log('Recibi tu pedidos')
         console.log('Estoy llevando tu pedido a la cocina')
         setTimeout( () =>{
-            resolve(['Lucas','Flavio', 'Daniel', 'Martin', 'Pilar'])
+            alert('Desde promise' +  ['Mueble Europe','Mueble Moderno', 'Mueble Vintage'])
+            resolve(['Mueble Europe','Mueble Moderno', 'Mueble Vintage', 'Martin', 'Pilar'])
             //reject(['rata'], 'perro')
-        }, 3000)
+        }, 2000)
 
         console.log('Charlando')
     })
 
-    solicitarPlato.then(
-        (plato)=>{
+    productos.then(
+        (muebles)=>{
 
-            const tenemosDosPizzas = plato[0].length === 2
-            if (tenemosDosPizzas) {
-                console.log(`Recibimos nuestro plato con ${plato[0]} y ${plato[1]}`)
+            /*const tenemosDosPizzas = plato[0].length === 2
+            if (tenemosDosPizzas) {*/
+                console.log(`Desde promise ${muebles[0]},  ${muebles[1]}, ${muebles[2]}`)
                 return 'Todo salio bien'
-            } else {
+            /*} else {*/
                 throw new Error(`Te pedimos dos porciones`)
-            }
+            /*}*/
 
             //console.log(`Recibi mi plato con ${plato[0]} y ${plato[1]}`)
         }, (error) => {
@@ -42,7 +44,7 @@ export const Item = () => {
     return (
 
         <div className='margin'>
-            {/*<p>{producto}</p>*/}
+
 
         </div>
     )
