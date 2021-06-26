@@ -1,0 +1,55 @@
+.contenedor{
+    display: flex;
+    justify-content: center;
+
+}
+
+.card{
+    background: #106881;
+    padding-top: 30px;
+    border-radius: 30px;
+    margin: 120px 10px 0 20px;
+    box-shadow: 0px 8px 6px #0000001A;
+    width: 280px;
+    height: 300px;
+}
+
+.card__header{
+    background: #106881;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    border-radius: 30px 30px 0 0;
+    margin-bottom: 20px;
+
+}
+
+.card__body{
+    background: #ddd;
+    color: #000;
+    padding: 30px;
+    height: 170px;
+    border-radius: 0 0 7px 7px;
+    text-align: left;
+
+}
+
+.card__footer{
+    background: #049804;
+    height: 10px;
+    position: absolute;
+    display: block;
+
+}
+
+.card__precio{
+    background: #e5196b;
+    float: right;
+    margin: 40px 0;
+    padding: 15px;
+    border-radius: 40px;
+    color: #dddddd;
+    font-weight: bold;
+}
