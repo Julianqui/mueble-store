@@ -1,6 +1,7 @@
 import {useState, useEffect} from "react"
 // import {ItemCount} from "../itemCount/itemCount";
 import {ItemList} from "../itemList/itemList"
+import {ItemDetailContainer} from "../itemDetailContainer/itemDetailContainer"
 
 import './itemListContainer.css';
 export const ItemListContainer = ({greeting}) => {
@@ -101,11 +102,10 @@ export const ItemListContainer = ({greeting}) => {
 
             <ItemList items={catalogo}/>
 
+
             {/*<ItemCount inicial={0} stock={10}/>*/}
 
-
-
-
+            
         </div>
 
     )

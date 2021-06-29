@@ -1,7 +1,7 @@
 
-import './item.css';
-export const Item = ({item})=>{
-    console.log(item)
+
+
+export const ItemDetail = ({item}) =>{
     return (
         <>
 
@@ -25,10 +25,12 @@ export const Item = ({item})=>{
                 </div>
             </div>
 
-
         </>
+
+
+
     )
 
 
-}
 
+}
