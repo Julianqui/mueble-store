@@ -1,19 +1,38 @@
 import {useState, useEffect} from "react"
 // import {ItemCount} from "../itemCount/itemCount";
+import { useParams} from 'react-router-dom'
 import {ItemList} from "../itemList/itemList"
 import {ItemDetailContainer} from "../itemDetailContainer/itemDetailContainer"
 
 import './itemListContainer.css';
+// import items from '../data/items.json'
 export const ItemListContainer = ({greeting}) => {
+    const { id } = useParams()
     const [catalogo, setCatalogo] = useState([])
 
-    const product= [{
+
+    useEffect(() => {
+        const getItem = () => {
+            return id ? ITEMS.filter(item => item.categoryId == id) : ITEMS;
+
+
+        }
+        setTimeout(()=> {
+            const item = getItem()
+            setCatalogo(item)
+        }, 2000)
+    }, [id])
+
+
+    const ITEMS= [{
+
         id: '1',
         title: 'Mueble Carnaval',
         subtitle: 'Sublime',
         image: "",
         description: 'Estilo europe, madera rústica',
-        price: '$10.000'
+        price: '$10.000',
+        categoryId: 'Carnaval'
     },
         {
             id: '2',
@@ -21,7 +40,8 @@ export const ItemListContainer = ({greeting}) => {
             subtitle: 'Premium',
             image: "",
             description: 'Estilo animalista y moderno',
-            price: '$6000'
+            price: '$6000',
+            categoryId: 'Stilson'
         },
         {
             id: '3',
@@ -29,7 +49,8 @@ export const ItemListContainer = ({greeting}) => {
             subtitle: 'Premium Galaxy',
             image: "",
             description: 'Madera balza y concreto',
-            price: '$2000'
+            price: '$2000',
+            categoryId: 'Roberson'
         },
         {
             id: '4',
@@ -37,7 +58,8 @@ export const ItemListContainer = ({greeting}) => {
             subtitle: 'Ultra',
             image: "",
             description: 'Moderno y minimalista',
-            price: '$9000'
+            price: '$9000',
+            categoryId: 'Roberson'
         },
         {
             id: '5',
@@ -45,7 +67,8 @@ export const ItemListContainer = ({greeting}) => {
             subtitle: 'Asteroide',
             image: "",
             description: 'Salvaje y osado',
-            price: '$20.000'
+            price: '$20.000',
+            categoryId: 'Marcos'
         },
         {
             id: '6',
@@ -53,7 +76,8 @@ export const ItemListContainer = ({greeting}) => {
             subtitle: 'Solar',
             image: "",
             description: 'Permanente y Locuas',
-            price: '$3000'
+            price: '$3000',
+            categoryId: 'Peter'
         },
         {
             id: '7',
@@ -61,7 +85,8 @@ export const ItemListContainer = ({greeting}) => {
             subtitle: 'Astral',
             image: "",
             description: 'Soñado e innovador',
-            price: '$11.000'
+            price: '$11.000',
+            categoryId: 'Osval'
         },
         {
             id: '8',
@@ -69,15 +94,16 @@ export const ItemListContainer = ({greeting}) => {
             subtitle: 'Magnificient',
             image: "",
             description: 'Fotogenico y atractivo',
-            price: '$89.990'
-        }]
+            price: '$89.990',
+            categoryId: 'Parque'
+         }]
 
     useEffect(()=>{
 
         const nuevaPromesa = new Promise((res, rej)=>{
 
             setTimeout(()=>{
-                res(product)
+                res(ITEMS)
             },2000)
 
         })

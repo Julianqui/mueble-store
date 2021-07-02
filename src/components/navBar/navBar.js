@@ -1,31 +1,57 @@
 import React from 'react'
 import {CartWidget} from "../cartWidget/cartWidget";
 import './navbar.css';
+import {Link, NavLink} from 'react-router-dom'
 export const NavBar = ({store}) => {
+
+    const categories = ['Productos', 'Sobre nosotros', 'Contacto']
+
+
     return (
         <nav className="nav">
 
-            <div className="logo">
-                <div className="logo__letter">
-                    M
+            <Link to='/'>
+                <div className="logo">
+                    <div className="logo__letter">
+                        M
+                    </div>
+                    <p className="logo__name">Mueble Store</p>
                 </div>
-                <p className="logo__name">Mueble Store</p>
-            </div>
+            </Link>
 
             <div className="menu-contenedor">
 
             <ul className='menu'>
-                <li>
-                    <p className="menu__link">Productos</p>
-                </li>
 
-                <li>
-                    <p className="menu__link">Sobre Nosotros</p>
-                </li>
+                {
+                    categories.map((category) => (
+                            <NavLink to={ `/category/${category}`}>
+                                <li>
+                                     <p className="menu__link">{category}</p>
+                                </li>
+                            </NavLink>
+                        )
+                    )
+                }
 
-                <li>
-                    <p className="menu__link">Contacto</p>
-                </li>
+{/*
+                <NavLink to='/category/Productos'>
+                    <li>
+                        <p className="menu__link">Productos</p>
+                    </li>
+                </NavLink>
+
+                <NavLink to='/category/nosotros'>
+                    <li>
+                        <p className="menu__link">Sobre Nosotros</p>
+                    </li>
+                </NavLink>
+
+                <NavLink to='/category/contacto'>
+                    <li>
+                        <p className="menu__link">Contacto</p>
+                    </li>
+                </NavLink>*/}
             </ul>
 
                 <CartWidget />
