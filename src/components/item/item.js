@@ -1,12 +1,12 @@
 
 import './item.css';
-import {Link} from "react-router-dom";
+import {NavLink} from "react-router-dom";
 export const Item = ({item})=>{
     const { id, title, price, pictureUrl } = item
     console.log(item)
     return (
         <>
-        <Link to={`/item/${id}`}>
+        <NavLink to={`/item/${id}`}>
             <div className='contenedor'>
 
 
@@ -27,7 +27,7 @@ export const Item = ({item})=>{
                 </div>
             </div>
 
-        </Link>
+        </NavLink>
         </>
     )
 

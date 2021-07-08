@@ -1,29 +1,32 @@
 
-
-
+import './itemDetail.css';
 export const ItemDetail = ({item}) =>{
+
     return (
         <>
 
             <div className='contenedor'>
+                { item.length === 0 ?
+                    <i className="fa fa-square"></i> :
+                    <div className='card'>
+                        <div className='card__header'>
+                            <h2><span> {item.title}</span></h2>
+                        </div>
 
+                        <div className='card__body'>
+                            <h3>{item.subtitle}</h3>
+                            <p><span>{item.description} </span></p>
+                            <span className='card__precio'>{item.price} </span>
+                        </div>
 
-                <div className='card'>
-                    <div className='card__header'>
-                        <h2><span>{item.title}</span></h2>
+                        <div className='card__footer'>
+
+                        </div>
                     </div>
 
-                    <div className='card__body'>
-                        <h3>{item.subtitle}</h3>
-                        <p><span>{item.description} </span></p>
-                        <span className='card__precio'>{item.price} </span>
-                    </div>
-
-                    <div className='card__footer'>
-
-                    </div>
-                </div>
+                    }
             </div>
+
 
         </>
 

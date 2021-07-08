@@ -4,7 +4,7 @@ import './navbar.css';
 import {Link, NavLink} from 'react-router-dom'
 export const NavBar = ({store}) => {
 
-    const categories = ['Productos', 'Sobre nosotros', 'Contacto']
+    const categories = ['Madera Rustica', 'Mueble Moderno', 'Contacto']
 
 
     return (

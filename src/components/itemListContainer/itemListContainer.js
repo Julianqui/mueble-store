@@ -26,25 +26,25 @@ export const ItemListContainer = ({greeting}) => {
 
     const ITEMS= [{
 
-        id: '1',
+        id: 1,
         title: 'Mueble Carnaval',
         subtitle: 'Sublime',
         image: "",
         description: 'Estilo europe, madera rústica',
         price: '$10.000',
-        categoryId: 'Carnaval'
+        categoryId: 'Madera Rustica'
     },
         {
-            id: '2',
+            id: 2,
             title: 'Mueble Stilson',
             subtitle: 'Premium',
             image: "",
             description: 'Estilo animalista y moderno',
             price: '$6000',
-            categoryId: 'Stilson'
+            categoryId: 'Mueble Moderno'
         },
         {
-            id: '3',
+            id: 3,
             title: 'Mueble Roberson',
             subtitle: 'Premium Galaxy',
             image: "",
@@ -53,7 +53,7 @@ export const ItemListContainer = ({greeting}) => {
             categoryId: 'Roberson'
         },
         {
-            id: '4',
+            id: 4,
             title: 'Mueble Roberson',
             subtitle: 'Ultra',
             image: "",
@@ -62,7 +62,7 @@ export const ItemListContainer = ({greeting}) => {
             categoryId: 'Roberson'
         },
         {
-            id: '5',
+            id: 5,
             title: 'Mueble Marcos',
             subtitle: 'Asteroide',
             image: "",
@@ -71,7 +71,7 @@ export const ItemListContainer = ({greeting}) => {
             categoryId: 'Marcos'
         },
         {
-            id: '6',
+            id: 6,
             title: 'Mueble Peter',
             subtitle: 'Solar',
             image: "",
@@ -80,7 +80,7 @@ export const ItemListContainer = ({greeting}) => {
             categoryId: 'Peter'
         },
         {
-            id: '7',
+            id: 7,
             title: 'Mueble Osval',
             subtitle: 'Astral',
             image: "",
@@ -89,7 +89,7 @@ export const ItemListContainer = ({greeting}) => {
             categoryId: 'Osval'
         },
         {
-            id: '8',
+            id: 8,
             title: 'South Parque',
             subtitle: 'Magnificient',
             image: "",
@@ -124,9 +124,9 @@ export const ItemListContainer = ({greeting}) => {
 
             {/*<h1 className='greeting'>{greeting}</h1>*/}
 
+            {/*{catalogo.length === 0 ? '' : <ItemList items={catalogo}/>}*/}
 
-
-            <ItemList items={catalogo}/>
+            <ItemList item={catalogo}/>
 
 
             {/*<ItemCount inicial={0} stock={10}/>*/}
