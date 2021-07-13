@@ -4,7 +4,7 @@ import 'font-awesome/css/font-awesome.min.css';
 import {NavBar} from "./components/navBar/navBar";
 import {ItemListContainer} from "./components/itemListContainer/itemListContainer";
 import {ItemDetailContainer} from "./components/itemDetailContainer/itemDetailContainer";
-
+import { Cart } from './components/cart/cart'
 import { BrowserRouter as Router, Switch, Route, Link} from "react-router-dom";
 
 
@@ -30,7 +30,9 @@ import { BrowserRouter as Router, Switch, Route, Link} from "react-router-dom";
                     <Route exact path="/item/:id">
                         <ItemDetailContainer />
                     </Route>
-
+                    <Route path='/cart'>
+                        <Cart/>
+                    </Route>
 
                 </Switch>
             </main>

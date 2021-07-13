@@ -1,5 +1,5 @@
 import {useState, useEffect} from "react"
-// import {ItemCount} from "../itemCount/itemCount";
+import {ItemCount} from "../itemCount/itemCount";
 import { useParams} from 'react-router-dom'
 import {ItemList} from "../itemList/itemList"
 import {ItemDetailContainer} from "../itemDetailContainer/itemDetailContainer"
@@ -128,8 +128,6 @@ export const ItemListContainer = ({greeting}) => {
 
             <ItemList item={catalogo}/>
 
-
-            {/*<ItemCount inicial={0} stock={10}/>*/}
 
             
         </div>

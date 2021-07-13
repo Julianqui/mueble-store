@@ -1,46 +1,42 @@
-import React, { useState } from 'react';
-import './itemCount.css';
-export const ItemCount = ({stock, inicial, onAdd}) => {
+import React from 'react'
+import './itemCount.css'
+import {useState} from 'react'
 
-    const [count, setCount] = useState(inicial);
-    const [stocks, setStocks] = useState(inicial);
+export const ItemCount = ({stock, initial, onAdd}) => {
 
+    const [counter, setCounter] = useState (initial)
 
-    const actualizaCantidad = (add) => {
-        if ((stock >= count+add) && (0 <= count + add ))
-            setCount(count+add);
-            setStocks(count+add)
+    const [newStock, setStock] = useState (stock)
 
+    const subtract = ()=>{
+        if (counter > 1){
+            setCounter(counter - 1)
+            setStock(newStock + 1)
+        }
     }
 
-    function agrega() {
-        if(stocks > 0) {
-            alert(`Agregaste al carrito ${stocks} items`)
-
-        } else {
-            alert(`No se acepta!! No agregaste nada. No podes agregar 0 items.`)
+    const add = () => {
+        if(newStock !== 0){
+            setCounter(counter +1)
+            setStock(newStock -1)
         }
     }
 
 
+    return(
+        <div className="margin bg-gray-50 md:w-48 md:h-22 mx-auto">
+            <div className="count-contenedor button-margin">
 
-    return (
+                    <button className="agregar-restar" onClick={subtract}>-</button>
+                    <span className="">{counter}</span>
+                    <button className="agregar-restar" onClick={add}>+</button>
 
-        <div className='margin'>
-
-            <button className='agregar-button' onClick={() => agrega()}>Agregar Al Carrito</button>
-
-            <div className='count-contenedor'>
-
-                <button onClick={() => actualizaCantidad(-1)}>-</button>
-
-                <p className='number'>{count}</p>
-
-                <button onClick={() => actualizaCantidad(1)}>+</button>
-
+                <div className="">
+                    <button className="agregar-button" id="itemDetailBuy" onClick={onAdd} value={counter}>Agregar</button>
+                </div>
             </div>
-
         </div>
     )
-
 }
+
+export default ItemCount
